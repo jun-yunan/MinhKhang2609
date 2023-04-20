@@ -1,12 +1,13 @@
 <?php
-$s = '../../administrator/element_vmk/mod/database.php';
-if (file_exists($s)) {
-    $f = $s;
-}
-else {
-    $f = './administrator/element_vmk/mod/database.php';
-}
-require_once $f;
+// $s = '../../administrator/element_vmk/mod/database.php';
+// if (file_exists($s)) {
+//     $f = $s;
+// }
+// else {
+//     $f = './administrator/element_vmk/mod/database.php';
+// }
+// require_once $f;
+// -----------------------------------------------
 
 // $s = '../mod/database.php';
 // if (file_exists($s)) {
@@ -16,6 +17,32 @@ require_once $f;
 //     $f = './element_vmk/mod/database.php';
 // }
 // require_once $f;
+
+// --------------------------------------------------
+
+$s = '../mod/database.php';
+$s1 = './element_vmk/mod/database.php';
+$s2 = '../../administrator/element_vmk/mod/database.php';
+$s3 = './administrator/element_vmk/mod/database.php';
+
+if (file_exists($s)) {
+    $f = $s;
+}
+
+elseif (file_exists($s1)) {
+    $f = $s1;
+}
+
+elseif (file_exists($s2)) {
+    $f = $s2;
+
+}
+
+elseif (file_exists($s3)) {
+    $f = $s3;
+}
+
+require_once $f;
 
 class hanghoa extends DatabaseConnection {
     public function HanghoaGetAll() {

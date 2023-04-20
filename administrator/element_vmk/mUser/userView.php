@@ -104,25 +104,25 @@ require './element_vmk/mod/userCls.php'
                         <td><?php echo $v->ngaysinh; ?></td>
                         <td><?php echo $v->diachi; ?></td>
                         <td><?php echo $v->dienthoai; ?></td>
-                        <td><?php echo $v->ngaydangky; ?></td>
+                        <td><?php echo $v->ngaydangki; ?></td>
                         <td align="center">
                             <?php
                             if (isset($_SESSION['ADMIM'])) {
-                                if ($v->ability == 0) {
+                                if ($v->abiliti == 0) {
                             ?>
-                                    <a href="./element_vmk/mUser/userAct.php?reqact=setlock&iduser=<?php echo $v->iduser; ?> &ability=<?php echo $v->ability; ?>">
+                                    <a href="./element_vmk/mUser/userAct.php?reqact=setlock&iduser=<?php echo $v->iduser; ?> &abiliti=<?php echo $v->abiliti; ?>">
                                         <img class="iconimg" src="./img_vmk/clock.png" />
                                     </a>
                                 <?php
                                 } else {
                                 ?>
-                                    <a href="./element_vmk/mUser/userAct.php?reqact=setlock&iduser=<?php echo $v->iduser; ?> &ability=<?php echo $v->ability; ?>">
+                                    <a href="./element_vmk/mUser/userAct.php?reqact=setlock&iduser=<?php echo $v->iduser; ?> &abiliti=<?php echo $v->abiliti; ?>">
                                         <img class="iconimg" src="./img_vmk/unclock.png" />
                                     </a>
                                 <?php
                                 }
                             } else {
-                                if ($v->ability == 0) {
+                                if ($v->abiliti == 0) {
                                 ?>
                                     <img class="iconimg" src="./img_vmk/clock.png" />
                                 <?php
